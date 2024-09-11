@@ -207,7 +207,7 @@ const Home = ()=>{
         </div> 
        <div className="container mx-auto py-10 px-10">
         <div className="my-5 flex justify-center items-center">
-        <h2 className="text-3xl font-bold">Product</h2>
+        <h2 className="text-3xl after:first-line:selection: font-bold">Our Product</h2>
         </div>
        {
           user && <div className="grid md:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-5">

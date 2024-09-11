@@ -52,18 +52,18 @@ const CraftCard = ({craft, product ,setProduct})=>{
     <h2 className="flex justify-center items-center text-3xl">
       {product_name}
       <div className="flex space-x-3 ml-auto ">
-      <Link to={`/viewProduct/${_id}`} className="btn bg-red-400">View</Link>
+      <Link to={`/viewProduct/${_id}`} className="btn text-white bg-green-400">View Product</Link>
       <Link to={`/update/${_id}`} className="btn bg-red-400">
       
       <FiEdit className="text-3xl text-white"/></Link>
       <button className="btn bg-red-400" onClick={()=>handleDelete(_id)}><MdDelete className="text-3xl text-white"/></button>
       </div>
     </h2>
-    <p>{description}</p>
-    <div className="flex flex-col space-y-3">
+    {/* <p>{description}</p> */}
+    {/* <div className="flex flex-col space-y-3">
       <div className="text-[20px] gap-2 font-bold">Price : <span className="text-[19px] text-yellow-500 font-bold"> {price}</span></div>
       <div className=" text-[20px] gap-2 font-bold">Rating : <span className="font-bold text-yellow-500 text-[19px]"> {rating}</span></div>
-    </div>
+    </div> */}
   </div>
 </div>
         </div>
