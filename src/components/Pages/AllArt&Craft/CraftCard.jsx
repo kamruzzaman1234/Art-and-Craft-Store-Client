@@ -4,8 +4,11 @@ import Swal from 'sweetalert2'
 
 import { FiEdit } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Provider/AuthProvider";
+import { useContext } from "react";
 const CraftCard = ({craft, product ,setProduct})=>{
     const {_id, image_url, product_name, description, rating, price} = craft
+    const {user} = useContext(AuthContext)
     
     const handleDelete = _id =>{
       console.log(_id)
@@ -48,11 +51,14 @@ const CraftCard = ({craft, product ,setProduct})=>{
       src={image_url} className="w-full h-[400px]"
       alt="Shoes" />
   </figure>
-  <div className="card-body space-y-3">
-    <h2 className="flex justify-center items-center text-3xl">
+  <div className="card-body ">
+    <h2 className="flex justify-center font-bold items-center text-2xl">
       {product_name}
       <div className="flex space-x-3 ml-auto ">
-      <Link to={`/viewProduct/${_id}`} className="btn text-white bg-green-400">View Product</Link>
+      
+         <Link to={`/viewProduct/${_id}`} className="btn text-white bg-green-400">
+      View Product</Link>
+      
       <Link to={`/update/${_id}`} className="btn bg-red-400">
       
       <FiEdit className="text-3xl text-white"/></Link>

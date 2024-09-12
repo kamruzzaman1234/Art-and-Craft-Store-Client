@@ -38,8 +38,11 @@ const Home = ()=>{
 </div>
                     </div>
                 <div className="text-center">
-                    <h2 className="text-[60px] text-white font-bold">GET START <br /> YOUR FAVOURITE SHOOPING  </h2>
-                    <Link className="btn btn-orange-400 bg-orange-400 text-white">GET SHOP</Link>
+                    <h2 className="text-[60px] text-white font-bold">WELCOME TO <br />
+                     CRAFT<span className="text-orange-500">ECLIPS</span> </h2>
+                     <p className="px-32 text-white mb-10">Indulge in the artistry of handmade treasures and unleash your creativity with CraftEclipse. Explore a curated collection of paper crafts and glass art, personalize your own creations, and join our vibrant
+                     community of artisans. Let us craft something beautiful together!</p>
+                    <Link className="btn btn-orange-400 bg-orange-400 text-white">Get Started</Link>
                  </div>
 </div>
 
@@ -209,14 +212,15 @@ const Home = ()=>{
         <div className="my-5 flex justify-center items-center">
         <h2 className="text-3xl after:first-line:selection: font-bold">Our Product</h2>
         </div>
-       {
-          user && <div className="grid md:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-5">
+        <div className="grid md:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-5 mx-10">
             {
               allItems.map(allItem=> 
               <AllItems key={allItem._id} allItem={allItem}></AllItems>)
             }
           </div>
-        }
+       {/* {
+          user && 
+        } */}
        </div>
         </>
         

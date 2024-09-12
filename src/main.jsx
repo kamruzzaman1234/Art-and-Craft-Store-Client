@@ -41,17 +41,17 @@ const router = createBrowserRouter([
       },
       {
         path: "/allArt",
-        element: <privetRoute> <AllArtCraft></AllArtCraft> </privetRoute>,
-        loader: ()=> fetch('http://localhost:6008/addProduct')
+        element: <PrivetRoute> <AllArtCraft></ AllArtCraft> </PrivetRoute>,
+        loader: ()=>  fetch('http://localhost:6008/addProduct')
       },
       {
         path: "/update/:id",
-        element:<privetRoute> <UpdateProduct></UpdateProduct></privetRoute>,
+        element:<PrivetRoute> <UpdateProduct></UpdateProduct></PrivetRoute>,
         loader: ({params})=> fetch(`http://localhost:6008/addProduct/${params.id}`)
       },
       {
         path:"/viewProduct/:id",
-        element:<privetRoute><ViewProduct></ViewProduct></privetRoute>,
+        element:<PrivetRoute><ViewProduct></ViewProduct></PrivetRoute>,
         loader:({params})=> fetch(`http://localhost:6008/addProduct/${params.id}`)
       }
       

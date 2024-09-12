@@ -38,12 +38,14 @@ const Navbar = ()=>{
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><Link className="font-semibold" to="/">{user ? "Home" : ""}</Link></li>
-      {
-        user && <>
+    <li><Link className="font-semibold" to="/">{user ? "Home" : "Home"}</Link></li>
       <li><Link className="font-semibold" to="/allArt">All Art & Craft</Link></li>
       <li><Link className="font-semibold" to="/addItem">Add Craft Item</Link></li>
       <li><Link className="font-semibold" to="/myCart">My Cart Item</Link></li>
+     
+      {
+        user && <>
+     
         </>
       }
      
