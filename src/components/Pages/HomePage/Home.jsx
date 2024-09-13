@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import AllItems from "./AllItems";
+import Images from "./Images";
 
 
 const Home = ()=>{
@@ -239,6 +240,9 @@ const Home = ()=>{
         </button>
       </div>
        
+       </div>
+       <div className="mx-10">
+            <Images></Images>
        </div>
         </>
         
