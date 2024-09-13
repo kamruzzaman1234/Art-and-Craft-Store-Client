@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const ViewProduct = () => {
   const viewPr = useLoaderData();
-  const { _id, image_url, product_name, description, rating, price } = viewPr;
+  const { _id, image_url, craft_name, user_displayName, user_email, category, stock_status , description, rating, price } = viewPr;
   
   const [quantity, setQuantity] = useState(1);
 
@@ -17,15 +17,22 @@ const ViewProduct = () => {
   return (
     <div className="max-w-4xl my-10 mx-auto bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden flex hover:shadow-lg transition-shadow duration-300 ease-in-out">
       <img
-        className="w-1/3 h-full object-cover"
+        className="w-1/3 h-full object-fill"
         src={image_url}
         alt="Product"
       />
       <div className="p-6 flex-1">
-        <h3 className="text-gray-900 font-bold text-2xl mb-2">{product_name}</h3>
+        <h3 className="text-gray-900 font-bold text-3xl mb-2">{craft_name}</h3>
+        <p>{description}</p>
+        <h2 className="divider font-bold text-2xl"> Items Details </h2>
         <div className="flex items-center justify-between mb-4">
-          <span className="text-xl font-semibold text-red-600">${price}</span>
-          <span className="text-sm text-gray-500 line-through">$59.99</span>
+          <span className="text-xl font-semibold">Price : $ <span className="text-orange-500">{price}</span></span>
+          
+        </div>
+        <div>
+        <span className="text-xl font-semibold ">
+          
+          Rating : <span className="text-yellow-500">{rating} </span> out of 5</span>
         </div>
         <p className="text-gray-600 text-sm mb-4">
           {description}
@@ -43,13 +50,11 @@ const ViewProduct = () => {
         <div className="mb-4">
           <span className="text-lg font-semibold text-gray-900">Total: ${totalPrice}</span>
         </div>
-        <div className="flex space-x-4">
-          <button className="flex-1 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-200">
-            Add to Cart
-          </button>
-          <button className="flex-1 bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition duration-200">
-            Buy Now
-          </button>
+        <div className="">
+          <h2 className="divider font-bold text-2xl">User Info</h2>
+          <h2>User Name : {user_displayName}</h2>
+          <h2>User Email : {user_email}</h2>
+
         </div>
       </div>
     </div>

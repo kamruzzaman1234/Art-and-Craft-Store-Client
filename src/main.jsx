@@ -16,6 +16,7 @@ import AddCraftItem from './components/Pages/AddItemCraft/AddCraftItem.jsx';
 import AllArtCraft from './components/Pages/AllArt&Craft/AllArt&Craft.jsx';
 import UpdateProduct from './components/Pages/UpdateProduct/UpdateProdroduct.jsx';
 import ViewProduct from './components/Pages/UpdateProduct/ViewProduct.jsx';
+import MyCraftItems from './components/Pages/MyCraftItems/MyCraftItems.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
       {
         path:"/addItem",
         element: <PrivetRoute> <AddCraftItem></AddCraftItem> </PrivetRoute>
+      },
+      {
+        path:"/myCart",
+        element: <PrivetRoute> <MyCraftItems></MyCraftItems> </PrivetRoute>,
+        loader: ()=> fetch('http://localhost:6008/addProduct')
       },
       {
         path: "/allArt",
