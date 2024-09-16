@@ -17,7 +17,7 @@ const ViewProduct = () => {
   return (
     <div className="max-w-4xl my-10 mx-auto bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden flex hover:shadow-lg transition-shadow duration-300 ease-in-out">
       <img
-        className="w-1/3 h-full object-fill"
+        className="w-[40%] h-full object-fill"
         src={image_url}
         alt="Product"
       />

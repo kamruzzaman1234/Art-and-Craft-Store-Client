@@ -1,6 +1,6 @@
 const FaQ = ()=>{
     return(
-        <div className="my-10 mx-4 p-5 bg-orange-50">
+        <div className="my-10 mx-10 rounded-lg p-5 bg-orange-50 ">
             <div className="mb-6">
                 <h2 className="text-3xl font-semibold mb-3">Got Question? Lets Up Help</h2>
                 <p>Welcome to our FAQ section! Here, you will find answers to common questions about our Art & Craft Store. Whether you are curious about editing craft data, using our personal craft feature, 

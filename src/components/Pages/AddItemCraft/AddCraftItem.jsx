@@ -43,7 +43,7 @@ const AddCraftItem = () => {
         })
       }
     })
-    alert(form)
+ 
   }
  
 

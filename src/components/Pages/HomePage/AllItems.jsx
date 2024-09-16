@@ -23,10 +23,10 @@ const AllItems = ({ allItem }) => {
           <h4 className="font-bold text-[16px] sm:text-[18px] md:text-[20px]">
             Category: <span className="font-medium">{category}</span>
           </h4>
-          <h4 className="font-semibold text-[16px] sm:text-[18px] md:text-[20px]">
-            Processing Time: <span>{processing_time}</span> days
+          <h4 className="font-bold text-[16px] sm:text-[18px] md:text-[20px]">
+            Processing Time: <span className="font-medium">{processing_time}</span> days
           </h4>
-          <h4 className="font-semibold text-[16px] sm:text-[18px] md:text-[20px]">
+          <h4 className="font-bold text-[16px] sm:text-[18px] md:text-[20px]">
             Price: $ <span className="text-orange-600 text-[20px] sm:text-[22px] md:text-[24px] font-medium">{price}</span>
           </h4>
           <h4 className="font-bold text-[16px] sm:text-[18px] md:text-[20px]">

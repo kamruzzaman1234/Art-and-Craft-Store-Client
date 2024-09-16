@@ -4,9 +4,14 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { MdOutgoingMail } from "react-icons/md";
+import { getAuth } from "firebase/auth";
+
+const auth = getAuth();
+
 
 const Navbar = ()=>{
   const {user, logOut} = useContext(AuthContext)
+  console.log(user)
 
   const handleLogOut = ()=>{
     logOut()
@@ -53,12 +58,14 @@ const Navbar = ()=>{
       
     </ul>
   </div>
-  <div className="navbar-end space-x-2">
+  <div className="navbar-end space-x-5 mx-10">
     {
-      user ? <div className="flex flex-col">
-        
-        <span className="flex items-center"> <MdOutgoingMail className="text-xl"/> {user.email}</span>
-        <button className=" rounded-lg text-white bg-[#d9a925] font-bold" onClick={handleLogOut}>Sign Out</button>
+      user ? <div className="flex  space-x-4">
+        <button className="btn bg-blue-400 rounded-lg">
+          {user ? <span className="text-white">
+          {user.displayName}</span> : <></>}
+        </button>
+        <button className="btn rounded-lg text-white bg-[#d9a925] font-bold" onClick={handleLogOut}>Sign Out</button>
       </div> : <>
       
       <button className="border border-[#d9a925]  text-[14px]
