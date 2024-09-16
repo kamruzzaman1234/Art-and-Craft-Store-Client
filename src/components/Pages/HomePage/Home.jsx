@@ -3,6 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import AllItems from "./AllItems";
 import Images from "./Images";
+import FaQ from "./FaQ";
 
 
 const Home = ()=>{
@@ -225,7 +226,7 @@ const Home = ()=>{
         <div className="my-5 flex justify-center items-center">
         <h2 className="text-3xl after:first-line:selection: font-bold">Our Product</h2>
         </div>
-        <div className="grid md:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-5 mx-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-5 mx-10">
             {
               craft.slice(0, visibleCount).map(allItem=> 
               <AllItems key={allItem._id} allItem={allItem}></AllItems>)
@@ -234,7 +235,7 @@ const Home = ()=>{
           <div className="text-center mt-6">
         <button
           onClick={toggleView}
-          className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700"
+          className="bg-orange-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-700"
         >
           {showAll ? "Show Less" : "Show All"}
         </button>
@@ -243,6 +244,9 @@ const Home = ()=>{
        </div>
        <div className="mx-10">
             <Images></Images>
+       </div>
+       <div className="mx-10">
+            <FaQ></FaQ>
        </div>
         </>
         
