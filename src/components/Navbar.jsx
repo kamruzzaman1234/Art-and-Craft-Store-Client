@@ -44,9 +44,9 @@ const Navbar = ()=>{
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
     <li><Link className="font-semibold" to="/">{user ? "Home" : "Home"}</Link></li>
-      <li><Link className="font-semibold" to="/allArt">All Craft Items</Link></li>
-      <li><Link className="font-semibold" to="/addItem">Add Craft Item</Link></li>
-      <li><Link className="font-semibold" to="/myCart">My Cart Item</Link></li>
+      <li><Link className="font-semibold" to="/allArt">{user ? "AllArt Craft":"AllArt Craft"}</Link></li>
+      <li><Link className="font-semibold" to="/addItem">{user ? "Add Craft Items" : "Add Craft Items"}</Link></li>
+      <li><Link className="font-semibold" to="/myCart">{user ? "My Cart Items": "My Cart Items"}</Link></li>
      
       {
         user && <>

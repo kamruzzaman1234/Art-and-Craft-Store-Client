@@ -14,7 +14,7 @@ const MyCraft = ({crafts, craft, setCraft})=>{
         confirmButtonText: 'Yes, deleted it'        
       }).then((result)=>{
         if (result.isConfirmed){
-          fetch(`http://localhost:6008/addProduct/${_id}`, {
+          fetch(`https://art-and-craft-store-client-o94jstz5q-kmruzzamans-projects.vercel.app/addProduct/${_id}`, {
             method:"DELETE"
           })
           .then(res=>res.json())
