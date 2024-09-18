@@ -59,7 +59,8 @@ const MyCraft = ({crafts, craft, setCraft})=>{
         <div className="flex mt-3 space-x-3">
             <button onClick={()=>handleDelete(_id)} 
             className="btn bg-red-500 text-white font-bold">Delete</button>
-            <button className="btn bg-orange-500 text-white font-bold">Update</button>
+            <Link className="btn bg-orange-500
+             text-white font-bold" to={`/update/${_id}`}>Update</Link>
             <Link to={`/viewProduct/${_id}`} className="btn text-white bg-green-400">
                    View Details</Link>
         </div>
