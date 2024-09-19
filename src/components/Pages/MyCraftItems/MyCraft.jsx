@@ -37,11 +37,11 @@ const MyCraft = ({crafts, craft, setCraft})=>{
     }
     return(
         <div>
-           <div className=" bg-white px-4 py-3 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:scale-105">
+    <div className=" bg-white px-4 py-3 space-y-3 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:scale-105">
       <img className="w-full h-52 object-cover" src={image_url} alt={craft_name} />
       <div className=" mt-3">
         <h2 className="text-2xl font-bold text-gray-800">{craft_name}</h2>
-        <div className="badge badge-warning">{stock_status}</div>
+        <div className="badge badge-warning mb-3">{stock_status}</div>
         <p>{description}</p>
         
         <span>{category}</span>

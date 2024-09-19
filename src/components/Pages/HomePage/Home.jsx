@@ -11,7 +11,7 @@ const Home = ()=>{
     const {user} = useContext(AuthContext);
     const allItems = useLoaderData()
     const [craft, setCraft] = useState(allItems)
-    const [visibleCount, setVisibleCount] = useState(3);
+    const [visibleCount, setVisibleCount] = useState(6);
     const [showAll, setShowAll] = useState(false)
 
     const toggleView = ()=>{

@@ -5,7 +5,7 @@ import MyCraft from "./MyCraft";
 const MyCraftItems = ()=>{
     const craftItem = useLoaderData()
     const [craft, setCraft] = useState(craftItem)
-    const [visibleCount, setVisibleCount] = useState(3); 
+    const [visibleCount, setVisibleCount] = useState(6); 
     const [showAll, setShowAll] = useState(false);
     const toggleView = () => {
         if (showAll) {
