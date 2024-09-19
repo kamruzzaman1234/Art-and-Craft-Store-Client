@@ -63,6 +63,7 @@ const handleGithubLogin = () => {
 
 const handleEmail = ()=>{
   signInWithPopup(auth, gProvider)
+  console.log(signInWithPopup(auth, gProvider))
   .then(result=>{
     const user =result.user
     console.log(user)
