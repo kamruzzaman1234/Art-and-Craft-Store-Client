@@ -11,6 +11,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import {FaEye, FaEyeSlash} from 'react-icons/fa';
 import {FaGoogle, FaGithub, FaTwitter} from 'react-icons/fa';
 import { useLocation, useNavigate } from "react-router-dom";
+import { GoogleAuthProvider, signInWithPopup,GithubAuthProvider,TwitterAuthProvider } from "firebase/auth";
+import auth from "../../../Firebase/Firebase.config";
+
+import { getAuth } from "firebase/auth";
 
 
 
@@ -21,6 +25,53 @@ const LoginPage = () => {
 const location = useLocation()
 const navigate = useNavigate()
 
+const gProvider = new GoogleAuthProvider()
+const githubProvider = new GithubAuthProvider()
+const twitterProvider = new TwitterAuthProvider();
+
+const handleTwitterLogin = () => {
+  const auth = getAuth();
+
+  signInWithPopup(auth, twitterProvider)
+    .then((result) => {
+  
+      const user = result.user;
+      console.log(user);
+
+      navigate(location?.state ? location.state : '/');
+    })
+    .catch((error) => {
+      console.log(error.message);
+    });
+};
+const handleGithubLogin = () => {
+  const auth = getAuth();
+  
+  signInWithPopup(auth, githubProvider)
+    .then((result) => {
+      
+      const user = result.user;
+      console.log(user);
+    
+      navigate(location?.state ? location.state : '/');
+    })
+    .catch((error) => {
+  
+      console.log(error.message);
+    });
+};
+
+const handleEmail = ()=>{
+  signInWithPopup(auth, gProvider)
+  .then(result=>{
+    const user =result.user
+    console.log(user)
+    navigate(location?.state ? location.state:'/')
+  })
+  .catch(error=>{
+    console.log(error.message)
+  })
+}
 
   const handleSubmit = (e)=>{
       e.preventDefault()
@@ -109,13 +160,25 @@ const navigate = useNavigate()
           <div className="mt-6">
             <div className="text-center text-gray-600 mb-4">Or login with</div>
             <div className="flex justify-center space-x-4">
-              <button className="flex items-center px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
-                <FaGoogle className="mr-2" /> Gmail
+              <button className="flex items-center px-4 py-2
+               bg-red-500 text-white rounded-md
+                hover:bg-red-600 focus:outline-none 
+                focus:ring-2 focus:ring-red-500 
+                focus:ring-opacity-50" onClick={handleEmail}>
+                <FaGoogle className="mr-2"/> Gmail
               </button>
-              <button className="flex items-center px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-opacity-50">
+              <button className="flex items-center px-4
+               py-2 bg-gray-800 text-white 
+               rounded-md hover:bg-gray-900
+                focus:outline-none focus:ring-2
+                 focus:ring-gray-800 focus:ring-opacity-50" onClick={handleGithubLogin}>
                 <FaGithub className="mr-2" /> GitHub
               </button>
-              <button className="flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+              <button className="flex items-center px-4 py-2
+               bg-blue-500 text-white rounded-md
+                hover:bg-blue-600 focus:outline-none 
+                focus:ring-2 focus:ring-blue-500 
+                focus:ring-opacity-50" onClick={handleTwitterLogin}>
                 <FaTwitter className="mr-2" /> Twitter
               </button>
             </div>

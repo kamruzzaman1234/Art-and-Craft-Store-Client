@@ -6,7 +6,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { MdOutgoingMail } from "react-icons/md";
 import { getAuth } from "firebase/auth";
 
-const auth = getAuth();
+// const auth = getAuth();
 
 
 const Navbar = ()=>{
@@ -37,7 +37,7 @@ const Navbar = ()=>{
       }
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">Sornali<TbBrandMinecraft 
+    <a className="btn btn-ghost text-xl">Sornali <span className="text-orange-500">Craft</span> <TbBrandMinecraft 
     className="text-[#e6c647] text-3xl"/></a>
     
   </div>
@@ -68,18 +68,20 @@ const Navbar = ()=>{
         <button className="btn rounded-lg text-white bg-[#d9a925] font-bold" onClick={handleLogOut}>Sign Out</button>
       </div> : <>
       
-      <button className="border border-[#d9a925]  text-[14px]
-   hover:bg-success hover:text-white font-medium px-6 py-2 rounded-lg
-    flex items-center space-x-3">
-        <IoIosLogIn className="text-[17px] font-bold"/>
-        <Link to="/login">Log In</Link>
-    </button>
-    <button className="border border-[#d9a925] 
-     text-[14px] hover:bg-success hover:text-white  items-center
-     font-medium px-6 py-2 rounded-lg flex space-x-3">
-        <IoIosLogIn className="text-[17px] font-bold"/>
-        <Link to="/register">Register</Link>
-    </button>
+      <button className="border border-[#d9a925] text-[12px] md:text-[14px] lg:text-[16px] 
+  hover:bg-success hover:text-white font-medium px-4 py-2 md:px-6 md:py-3 
+  rounded-lg flex items-center space-x-3">
+    <IoIosLogIn className="text-[16px] md:text-[18px] lg:text-[20px] font-bold"/>
+    <Link to="/login">Log In</Link>
+</button>
+
+<button className="border border-[#d9a925] text-[12px] md:text-[14px] lg:text-[16px] 
+  hover:bg-success hover:text-white font-medium px-4 py-2 md:px-6 md:py-3 
+  rounded-lg flex items-center space-x-3">
+    <IoIosLogIn className="text-[16px] md:text-[18px] lg:text-[20px] font-bold"/>
+    <Link to="/register">Register</Link>
+</button>
+
       </>
     }
   

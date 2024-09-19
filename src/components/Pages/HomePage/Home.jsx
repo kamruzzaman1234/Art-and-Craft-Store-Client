@@ -4,6 +4,7 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 import AllItems from "./AllItems";
 import Images from "./Images";
 import FaQ from "./FaQ";
+import Contact from "./Contact";
 
 
 const Home = ()=>{
@@ -174,7 +175,7 @@ const Home = ()=>{
 
        <div className="container mx-auto py-10 px-10">
         <div className="my-5 flex justify-center items-center">
-        <h2 className="text-3xl after:first-line:selection: font-bold">Our Craft Items</h2>
+        <h2 className="text-3xl after:first-line:selection: font-bold divider">Our Craft Items</h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-5 mx-10">
             {
@@ -197,6 +198,9 @@ const Home = ()=>{
        </div>
        <div className="mx-10">
             <FaQ></FaQ>
+       </div>
+       <div className="mx-10">
+            <Contact />
        </div>
         </>
         

@@ -18,20 +18,20 @@ const AllItems = ({ allItem }) => {
         </figure>
 
         <div className="mt-4 space-y-2">
-          <h2 className="font-bold text-[16px] sm:text-[18px] md:text-[20px]">{craft_name}</h2>
+          <h2 className="font-semibold text-[22px] sm:text-[18px] md:text-[20px]">{craft_name}</h2>
           <p className="text-[14px] sm:text-[16px] md:text-[17px] my-3">{description}</p>
-          <h4 className="font-bold text-[16px] sm:text-[18px] md:text-[20px]">
-            Category: <span className="font-medium">{category}</span>
+          <h4 className="font-semibold text-[16px] sm:text-[18px] md:text-[20px]">
+            Category: <span className="font-medium ">{category}</span>
           </h4>
-          <h4 className="font-bold text-[16px] sm:text-[18px] md:text-[20px]">
-            Processing Time: <span className="font-medium">{processing_time}</span> days
+          {/* <h4 className="font-semibold text-[16px] sm:text-[18px] md:text-[20px]">
+            Processing Time: <span className="font-medium">{processing_time} days</span>
           </h4>
-          <h4 className="font-bold text-[16px] sm:text-[18px] md:text-[20px]">
+          <h4 className="font-semibold text-[16px] sm:text-[18px] md:text-[20px]">
             Price: $ <span className="text-orange-600 text-[20px] sm:text-[22px] md:text-[24px] font-medium">{price}</span>
           </h4>
-          <h4 className="font-bold text-[16px] sm:text-[18px] md:text-[20px]">
+          <h4 className="font-semibold text-[16px] sm:text-[18px] md:text-[20px]">
             Rating: <span className="font-medium">{rating} out of 5</span>
-          </h4>
+          </h4> */}
         </div>
 
         <div>

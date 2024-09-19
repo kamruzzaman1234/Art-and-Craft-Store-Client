@@ -17,7 +17,7 @@ const UpdateProduct = () => {
         const updateUser = {image_url, product_name, description, price, rating}
         form.reset()
         console.log(updateUser)
-        fetch(`https://art-and-craft-store-client-o94jstz5q-kmruzzamans-projects.vercel.app/addProduct/${_id}`,{
+        fetch(`http://localhost:6008/addProduct/${_id}`,{
           method:"PUT",
           headers :{
             'content-type':'application/json'

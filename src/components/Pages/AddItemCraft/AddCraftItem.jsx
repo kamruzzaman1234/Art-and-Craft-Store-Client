@@ -36,7 +36,7 @@ const AddCraftItem = () => {
     console.log(allUsers);
     form.reset();
 
-    fetch('https:/art-and-craft-store-client-o94jstz5q-kmruzzamans-projects.vercel.app/addProduct', {
+    fetch('http://localhost:6008/addProduct', {
       method: "POST",
       headers: {
         'content-type': 'application/json',

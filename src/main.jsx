@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>,
-        loader: ()=> fetch('https://art-craft-store-server-5j8lng7tp-kmruzzamans-projects.vercel.app/addProduct')
+        loader: ()=> fetch('http://localhost:6008/addProduct')
       },
       {
         path:"/register",
@@ -43,22 +43,22 @@ const router = createBrowserRouter([
       {
         path:"/myCart",
         element: <PrivetRoute> <MyCraftItems></MyCraftItems> </PrivetRoute>,
-        loader: ()=> fetch('https://art-craft-store-server-5j8lng7tp-kmruzzamans-projects.vercel.app/addProduct')
+        loader: ()=> fetch('http://localhost:6008/addProduct')
       },
       {
         path: "/allArt",
         element: <PrivetRoute> <AllArtCraft></ AllArtCraft> </PrivetRoute>,
-        loader: ()=>  fetch('https://art-craft-store-server-5j8lng7tp-kmruzzamans-projects.vercel.app/addProduct')
+        loader: ()=>  fetch('http://localhost:6008/addProduct')
       },
       {
         path: "/update/:id",
         element:<PrivetRoute> <UpdateProduct></UpdateProduct></PrivetRoute>,
-        loader: ({params})=> fetch(`https://art-craft-store-server-5j8lng7tp-kmruzzamans-projects.vercel.app/addProduct/${params.id}`)
+        loader: ({params})=> fetch(`http://localhost:6008/addProduct/${params.id}`)
       },
       {
         path:"/viewProduct/:id",
         element:<PrivetRoute><ViewProduct></ViewProduct></PrivetRoute>,
-        loader:({params})=> fetch(`https://art-craft-store-server-5j8lng7tp-kmruzzamans-projects.vercel.app/addProduct/${params.id}`)
+        loader:({params})=> fetch(`http://localhost:6008/addProduct/${params.id}`)
       }
       
     ]
