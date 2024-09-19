@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>,
-        loader: ()=> fetch('http://localhost:6008/addProduct')
+        loader: ()=> fetch('https://art-craft-store-server-1.onrender.com/addProduct')
       },
       {
         path:"/register",
@@ -43,22 +43,22 @@ const router = createBrowserRouter([
       {
         path:"/myCart",
         element: <PrivetRoute> <MyCraftItems></MyCraftItems> </PrivetRoute>,
-        loader: ()=> fetch('http://localhost:6008/addProduct')
+        loader: ()=> fetch('https://art-craft-store-server-1.onrender.com/addProduct')
       },
       {
         path: "/allArt",
         element: <PrivetRoute> <AllArtCraft></ AllArtCraft> </PrivetRoute>,
-        loader: ()=>  fetch('http://localhost:6008/addProduct')
+        loader: ()=>  fetch('https://art-craft-store-server-1.onrender.com/addProduct')
       },
       {
         path: "/update/:id",
         element:<PrivetRoute> <UpdateProduct></UpdateProduct></PrivetRoute>,
-        loader: ({params})=> fetch(`http://localhost:6008/addProduct/${params.id}`)
+        loader: ({params})=> fetch(`https://art-craft-store-server-1.onrender.com/addProduct/${params.id}`)
       },
       {
         path:"/viewProduct/:id",
         element:<PrivetRoute><ViewProduct></ViewProduct></PrivetRoute>,
-        loader:({params})=> fetch(`http://localhost:6008/addProduct/${params.id}`)
+        loader:({params})=> fetch(`https://art-craft-store-server-1.onrender.com/addProduct/${params.id}`)
       }
       
     ]

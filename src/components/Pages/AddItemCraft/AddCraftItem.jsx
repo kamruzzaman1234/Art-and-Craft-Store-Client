@@ -36,7 +36,7 @@ const AddCraftItem = () => {
     console.log(allUsers);
     form.reset();
 
-    fetch('http://localhost:6008/addProduct', {
+    fetch('https://art-craft-store-server-1.onrender.com/addProduct', {
       method: "POST",
       headers: {
         'content-type': 'application/json',

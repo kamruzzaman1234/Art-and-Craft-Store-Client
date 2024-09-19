@@ -45,7 +45,7 @@ const UpdateProduct = () => {
     console.log(allUsers);
     form.reset();
 
-    fetch(`http://localhost:6008/addProduct/${_id}`, {
+    fetch(`https://art-craft-store-server-1.onrender.com/addProduct/${_id}`, {
       method: "PUT",
       headers: {
         'content-type': 'application/json',
